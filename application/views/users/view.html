@@ -1,0 +1,27 @@
+$def with(users)
+<h3>
+    <a href="/users">Usuarios</a>
+</h3>
+<strong>Id Pedido:</strong> $users.username <br>
+<strong>Nombre:</strong> $users.name <br>
+
+$if users.status == 0:
+    <strong>Estado:</strong> Disabled <br>
+$else:
+    <strong>Estado</strong> Enabled <br>
+<strong>Email:</strong> $users.email <br>
+<strong>Otros:</strong> $users.other_data <br>
+<strong>UserHash:</strong> $users.user_hash <br>
+$if users.privilege == 0:
+    <strong>Privilegio:</strong> Administrador<br>
+$else:
+    <strong>Privilegio:</strong> Usuario<br>
+
+$if users.change_pwd == 0:
+    <strong>Force change password:</strong> No<br>
+$else:
+    <strong>Force change password:</strong> Yes<br>
+
+<strong>Created:</strong> $users.created <br>
+<br>
+<br>

@@ -1,0 +1,23 @@
+$def with(pedidos)
+<h3>
+    <a href="/pedidos">Pedidos</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Pedidos</th>
+        <th>Presentacion</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in pedidos:
+        <tr>
+            <td><a href='/pedidos/view/$item.id_pedido'>$item.producto</a></td>
+            <td><a href='/pedidos/view/$item.id_pedido'>$item.presentacion</a></td>
+            <td><a href='/pedidos/edit/$item.id_pedido'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/pedidos/delete/$item.id_pedido'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

@@ -1,0 +1,5 @@
+'/pedidos', 'application.controllers.pedidos.index.Index',
+'/pedidos/view/(.+)', 'application.controllers.pedidos.view.View',
+'/pedidos/edit/(.+)', 'application.controllers.pedidos.edit.Edit',
+'/pedidos/delete/(.+)', 'application.controllers.pedidos.delete.Delete',
+'/pedidos/insert', 'application.controllers.pedidos.insert.Insert',
